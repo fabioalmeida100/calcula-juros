@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using calculajuros.Business;
 using Microsoft.AspNetCore.Mvc;
 
 namespace calculajuros.Controllers
@@ -10,10 +11,18 @@ namespace calculajuros.Controllers
     [ApiController]
     public class CalculaJurosController : Controller
     {
+        private ICalculoJurosBusiness _calculoJuros;
+
+        public CalculaJurosController(ICalculoJurosBusiness calculoJuros)
+        {
+            _calculoJuros = calculoJuros;
+        }
+
         [HttpGet]
         public IActionResult Index([FromQuery] decimal valorInicial, int meses)
         {
-            return Ok(valorInicial.ToString() + " | " + meses);
+
+            return Ok(_calculoJuros.ObterJurosComposto(valorInicial, meses));
         }
 
         [HttpGet("ShowMeTheCode")]
