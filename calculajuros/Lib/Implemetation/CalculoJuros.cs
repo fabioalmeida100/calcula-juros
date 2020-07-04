@@ -22,7 +22,8 @@ namespace calculajuros.Lib.Implemetation
         public decimal JurosComposto()
         {
             var valorFinalComJuros = (double)_valorInicial * Math.Pow((1 + _taxaJuros.ObterTaxaJuros()), _meses);
-            return Convert.ToDecimal(valorFinalComJuros, CultureInfo.InvariantCulture); 
+            var valorTruncadoDuasCasasDecimais = Math.Truncate(valorFinalComJuros * 100) / 100;
+            return Convert.ToDecimal(valorTruncadoDuasCasasDecimais, CultureInfo.InvariantCulture); 
         }
 
     }
