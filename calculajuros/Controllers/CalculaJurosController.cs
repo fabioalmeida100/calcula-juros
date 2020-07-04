@@ -32,7 +32,7 @@ namespace calculajuros.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Index([FromQuery] decimal valorInicial, int meses)
         {
-            return Ok(_calculoJuros.ObterJurosComposto(valorInicial, meses));
+            return Ok(_calculoJuros.ObterJurosComposto(valorInicial, meses).ToString("N2"));
         }
 
         /// <summary>

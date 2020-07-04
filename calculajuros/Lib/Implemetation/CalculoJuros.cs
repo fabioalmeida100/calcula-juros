@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -20,8 +21,8 @@ namespace calculajuros.Lib.Implemetation
 
         public decimal JurosComposto()
         {
-            var baseCalculo = (double)_valorInicial * Math.Pow((1 + _taxaJuros.ObterTaxaJuros()), _meses);
-            return Convert.ToDecimal(baseCalculo); 
+            var valorFinalComJuros = (double)_valorInicial * Math.Pow((1 + _taxaJuros.ObterTaxaJuros()), _meses);
+            return Convert.ToDecimal(valorFinalComJuros, CultureInfo.InvariantCulture); 
         }
 
     }

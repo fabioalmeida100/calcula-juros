@@ -1,6 +1,7 @@
 ﻿using calculajuros.Lib;
 using calculajuros.Lib.Implemetation;
 using System;
+using System.Globalization;
 
 namespace calculajuros.Business.Implementation
 {
@@ -16,7 +17,7 @@ namespace calculajuros.Business.Implementation
         public decimal ObterJurosComposto(decimal valorInicial, int meses)
         {
             var calculaJuros = new CalculoJuros(valorInicial, meses, _taxaJuros);
-            return Math.Truncate(100 * calculaJuros.JurosComposto())/100;
+            return calculaJuros.JurosComposto();
         }
     }
 }
