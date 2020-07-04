@@ -9,7 +9,7 @@ namespace retornajuros.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return Ok("0,01");
+            return Ok("0.01");
         }
     }
 }

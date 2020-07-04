@@ -1,0 +1,10 @@
+version: '3'
+services:
+    retornataxa: 
+        image: "retornataxa"
+        ports: 
+            - "3020:3020" 
+    calculajuros:
+        image: "calculajuros"
+        ports: 
+            - "3000:3000"

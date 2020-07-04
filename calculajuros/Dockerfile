@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1.100-buster AS build-env
 WORKDIR /app
 
 # Copy csproj and restore as distinct layers
@@ -13,4 +13,6 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
 COPY --from=build-env /app/out .
+EXPOSE 3000/tcp
+ENV ASPNETCORE_URLS=http://+:3000
 ENTRYPOINT ["dotnet", "calculajuros.dll"]

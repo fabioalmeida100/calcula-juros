@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using calculajuros.Business;
 using calculajuros.Business.Implementation;
+using calculajuros.Lib;
+using calculajuros.Lib.Implemetation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,7 +30,9 @@ namespace calculajuros
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddScoped<ICalculoJurosBusiness, CalculoJurosBusiness>();
+            services.AddTransient<ITaxaJuros, TaxaJuros>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
