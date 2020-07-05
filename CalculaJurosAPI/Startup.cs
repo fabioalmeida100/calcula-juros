@@ -30,6 +30,7 @@ namespace CalculaJurosAPI
             services.AddControllers();
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddScoped<ICalculoJurosBusiness, CalculoJurosBusiness>();
+            services.AddScoped<IShowMeTheCodeBusiness, ShowMeTheCodeBusiness>();
             services.AddTransient<ITaxaJuros, TaxaJuros>();
 
             services.AddSwaggerGen(c =>

@@ -13,7 +13,7 @@
             <response code="200">Retorna o valor calculado do juros composto</response>
             <response code="500">Possível problema de comunicação com a API de Taxa de Juros. Verificar URL da API no arquivo appsettings.json</response>            
         </member>
-        <member name="M:CalculaJurosAPI.Controllers.CalculaJurosController.ShowMeTheCode">
+        <member name="M:CalculaJurosAPI.Controllers.ShowMeTheCodeController.ShowMeTheCode">
             <summary>
                 Retorna a URL do projeto no Github
             </summary>

@@ -5,14 +5,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CalculaJurosTeste
 {
     [TestClass]
-    public class CalculaJurosCompostosTest
+    public class CalculaJurosTeste
     {
         private readonly TaxaJuros0_01Fake _taxaJuros0_virgula_01;
         private readonly TaxaJuros0_10Fake _taxaJuros0_virgula_10;
         private readonly TaxaJuros0_15Fake _taxaJuros0_virgula_15;
         private readonly TaxaJurosZero _taxaJurosZero;
 
-        public CalculaJurosCompostosTest()
+        public CalculaJurosTeste()
         {
             _taxaJuros0_virgula_01 = new TaxaJuros0_01Fake();
             _taxaJuros0_virgula_10 = new TaxaJuros0_10Fake();

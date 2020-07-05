@@ -29,16 +29,5 @@ namespace CalculaJurosAPI.Controllers
         {
             return Ok(_calculoJuros.ObterJurosComposto(valorInicial, meses).ToString("N2"));
         }
-
-        /// <summary>
-        ///     Retorna a URL do projeto no Github
-        /// </summary>
-        /// <response code="200">Retorna a URL do projeto no Github</response>
-        [HttpGet("ShowMeTheCode")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult ShowMeTheCode()
-        {
-            return Ok("https://github.com/fabioalmeida100/calcula-juros.git");
-        }
     }
 }
