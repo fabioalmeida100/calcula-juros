@@ -14,7 +14,7 @@ Na API 2 (CalculaJurosAPI) temos dois endpoints:
 
 - /CalculaJuros: recebe dois parâmetros e pode ser acessado via query string conforme exemplo - /calculajuros?valorinicial=100&meses=5
 
-- /ShowMeTheCode: não recebe nenhuma parâmetro e retorna um string com a Url do projeto.
+- /ShowMeTheCode: não recebe nenhuma parâmetro e retorna uma string com a Url do projeto.
 
 ### Como "subir" os serviços
 
@@ -22,7 +22,7 @@ Devido a comunicação entre a chamada da API 2 com a API 1, esta última precis
 
 ### Swagger
 
-Em ambas API foi implementado o Swagger que pode ser acessar pelo rota /swagger.
+Em ambas APIs foi implementado o Swagger que pode ser acessado pela rota /swagger.
 
 ### Teste unitários
 
@@ -41,11 +41,6 @@ Internamente está sendo exposta a porta 3020.
 
 - Para o projeto (CalculaJurosAPI): ir para pasta do projeto /CalculaJurosAPI e executar os comandos:
 
-`docker build --pull -t calculajuros .`
-`docker run --rm -it -p 3000:3000 calculajuros`
-
-Internamente está sendo exposta a porta 3000.
-
 **IMPORTANTE:** antes de executar o build deste container você deve se certificar de configurar o arquivo **appsettings.json** deste projeto (CalculaJurosAPI) para apontar corretamente para o IP interno do container da API 1.
 
 Para saber o IP do container da API 1 basta executar o comando:
@@ -55,3 +50,12 @@ Para saber o IP do container da API 1 basta executar o comando:
 Para descobrir o ID do container da API 1, basta executar o comando (você irá encontrar o container da image `retornataxaapi` rodando):
 
 `docker ps`
+
+Após fazer a configuração para criar a image e subir o container da API 2, basta executar os seguintes comandos:
+
+`docker build --pull -t calculajuros .`
+`docker run --rm -it -p 3000:3000 calculajuros`
+
+Internamente está sendo exposta a porta 3000.
+
+
