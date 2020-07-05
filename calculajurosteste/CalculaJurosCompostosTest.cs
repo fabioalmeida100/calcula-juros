@@ -61,5 +61,12 @@ namespace CalculaJurosTeste
             var _calculaJuros_0_reais_10_meses = new CalculoJuros(0, 10, _taxaJuros0_virgula_15);
             Assert.AreEqual(0, _calculaJuros_0_reais_10_meses.JurosComposto());
         }
+
+        [TestMethod]
+        public void calcular_juros_composto_com_valor_100_12_reais_7_meses_taxa_15_porcento()
+        {
+            var _calculaJuros_100_12_reais_7_meses = new CalculoJuros((decimal)100.12, 7, _taxaJuros0_virgula_15);
+            Assert.AreEqual((decimal)266.32, _calculaJuros_100_12_reais_7_meses.JurosComposto());
+        }
     }
 }
