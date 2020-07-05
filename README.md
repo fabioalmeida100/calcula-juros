@@ -32,14 +32,14 @@ Criar o teste (ver falhar) - desenvolver - rodar o teste (sucesso) - refatorar e
 
 Os dois projetos podem ser executado via docker. Para que isso seja possível você deve:
 
-- Para o projeto (RetornaTaxaAPI): ir para pasta do projeto /RetornaTaxaAPI e executar os comandos:
+**Para o projeto (RetornaTaxaAPI):** ir para pasta do projeto /RetornaTaxaAPI e executar os comandos:
 
-`docker build --pull -t retornataxaapi .`
-`docker run --rm -it -p 3020:3020 retornataxaapi`
+- `docker build --pull -t retornataxaapi .`
+- `docker run --rm -it -p 3020:3020 retornataxaapi`
 
 Internamente está sendo exposta a porta 3020.
 
-- Para o projeto (CalculaJurosAPI): ir para pasta do projeto /CalculaJurosAPI e executar os comandos:
+**Para o projeto (CalculaJurosAPI):** ir para pasta do projeto /CalculaJurosAPI e executar os comandos:
 
 **IMPORTANTE:** antes de executar o build deste container você deve se certificar de configurar o arquivo **appsettings.json** deste projeto (CalculaJurosAPI) para apontar corretamente para o IP interno do container da API 1.
 
@@ -53,8 +53,8 @@ Para descobrir o ID do container da API 1, basta executar o comando (você irá 
 
 Após fazer a configuração para criar a image e subir o container da API 2, basta executar os seguintes comandos:
 
-`docker build --pull -t calculajuros .`
-`docker run --rm -it -p 3000:3000 calculajuros`
+- `docker build --pull -t calculajuros .`
+- `docker run --rm -it -p 3000:3000 calculajuros`
 
 Internamente está sendo exposta a porta 3000.
 
