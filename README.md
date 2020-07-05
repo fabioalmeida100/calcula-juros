@@ -62,7 +62,7 @@ Criar o teste (ver falhar) - desenvolver - rodar o teste (sucesso) - refatorar e
 
 O teste de integração está sendo realizado com a utilização do recurso de test Postman ("Runner") mais a linguagem JavaScript. 
 
-![Screenshot da tela de testes do Postman](https://raw.githubusercontent.com/fabioalmeida100/calcula-juros/master/Screenshot/Screenshoot_result_test_sample.jpg?token=ACMSTUKQGL5OFEFDDJWRBPC7AH3AU)
+![Screenshot da tela de testes do Postman](https://github.com/fabioalmeida100/calcula-juros/blob/master/Screenshot/Screenshoot_result_test_sample.jpg?raw=true)
 
 Na pasta /TesteIntegracao você irá encontrar as ***collections*** dos testes e um ***Environment*** chamado **Local** com a URL configurada para as portas 3020 (API 1) e 3000 (API 2).
 
