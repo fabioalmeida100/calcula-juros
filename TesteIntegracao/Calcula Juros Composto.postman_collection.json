@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "4510f4a5-976e-4bb5-8e7f-62683759fe29",
+		"_postman_id": "2e5502cd-fea7-4b12-af02-679f51bd165c",
 		"name": "Calcula Juros Composto",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8e67dcbf-ffcc-43da-a4b3-e3dd30896708",
+						"id": "9e8c0334-d4d2-43fa-a020-cbe9a429be4d",
 						"exec": [
 							"pm.test(\"Requisição feita com sucesso\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -51,7 +51,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c960444f-53eb-4b5b-a256-1a91623422f9",
+						"id": "6a256e0d-225c-4435-916a-a7ccac7a0ef9",
 						"exec": [
 							"pm.test(\"Requisição feita com sucesso\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -101,7 +101,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f6ccb6e3-03f8-46bb-8219-6db6d5eed08c",
+						"id": "29afbba0-a677-445e-a2fe-c53825e30927",
 						"exec": [
 							"pm.test(\"Requisição feita com sucesso\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -142,6 +142,46 @@
 					]
 				},
 				"description": "Retorna o cálculo de juros compostos passando 100,12 reais e 7 meses como parâmetro."
+			},
+			"response": []
+		},
+		{
+			"name": "Get ShowMeTheCode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4dd2fb1b-caca-436d-b955-fa7c308b7403",
+						"exec": [
+							"pm.test(\"Requisição feita com sucesso\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verifica se retornou o valor correto\", function () {\r",
+							"    pm.response.to.have.body(\"https://github.com/fabioalmeida100/calcula-juros.git\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Tempo de resposta menor que 100 ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(100);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlApiCalculaJuros}}/ShowMeTheCode",
+					"host": [
+						"{{urlApiCalculaJuros}}"
+					],
+					"path": [
+						"ShowMeTheCode"
+					]
+				},
+				"description": "Retornar URL do projeto no GitHub"
 			},
 			"response": []
 		}
