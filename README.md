@@ -1,6 +1,6 @@
 # Projeto de API para cálculo de Juros Composto
 
-Esta API foi criada no modelo de microserviço com comunicação entre um endpoint, dentro da CalculaJurosAPI (API 2) que internamente chama uma outra API chamada RetornaTaxaAPI (API 1).
+Esta API foi criada no modelo de microserviço com comunicação entre a CalculaJurosAPI (API 2) que internamente chama uma outra API chamada RetornaTaxaAPI (API 1).
 
 A API 2 faz uma comunicação Http via get para obter a taxa de juros que será aplicada no cálculo de juros composto.
 
@@ -14,7 +14,7 @@ Na API 2 (CalculaJurosAPI) temos dois endpoints:
 
 - /CalculaJuros: recebe dois parâmetros e pode ser acessado via query string conforme exemplo - /calculajuros?valorinicial=100&meses=5
 
-- /ShowMeTheCode: não recebe nenhuma parâmetro e retorna uma string com a Url do projeto.
+- /ShowMeTheCode: não recebe nenhum parâmetro e retorna uma string com a Url do projeto.
 
 ### Como "subir" os serviços
 
@@ -23,10 +23,6 @@ Devido a comunicação entre a chamada da API 2 com a API 1, esta última precis
 ### Swagger
 
 Em ambas APIs foi implementado o Swagger que pode ser acessado pela rota /swagger.
-
-### Teste unitários
-
-Criar o teste (ver falhar) - desenvolver - rodar o teste (sucesso) - refatorar e go! O projeto se baseia nesse aspecto, portanto todos os testes estão de acordo com o esperado.
 
 ### Docker 
 
@@ -58,4 +54,15 @@ Após fazer a configuração para criar a image e subir o container da API 2, ba
 
 Internamente está sendo exposta a porta 3000.
 
+### Teste Unitários
+
+Criar o teste (ver falhar) - desenvolver - rodar o teste (sucesso) - refatorar e go! O projeto se baseia nesse aspecto, portanto todos os testes estão de acordo com o esperado. Os teste unirário foram criados usando o MSTest.
+
+### Teste de Integração com Postman
+
+O teste de integração está sendo realizado com a utilização do recurso de test Postman ("Runner") mais a linguagem JavaScript. 
+
+![Screenshot da tela de testes do Postman](https://raw.githubusercontent.com/fabioalmeida100/calcula-juros/master/Screenshot/Screenshoot_result_test_sample.jpg?token=ACMSTUKQGL5OFEFDDJWRBPC7AH3AU)
+
+Na pasta /TesteIntegracao você irá encontrar as ***collections*** dos testes e um ***Environment*** chamado **Local** com a URL configurada para as portas 3020 (API 1) e 3000 (API 2).
 
