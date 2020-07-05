@@ -18,13 +18,23 @@ namespace CalculaJurosAPI.Lib.Implemetation
             double taxaJuros = 0;
 
             var client = new HttpClient();
-            client.BaseAddress = new Uri(_urlApiTaxaJuros);            
-            var response = client.GetAsync("taxajuros").Result;
-            
-            if (response.IsSuccessStatusCode)
+
+            try
             {
-                taxaJuros = Convert.ToDouble(response.Content.ReadAsStringAsync().Result, CultureInfo.InvariantCulture);
+                client.BaseAddress = new Uri(_urlApiTaxaJuros);
+                var response = client.GetAsync("taxajuros").Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    taxaJuros = Convert.ToDouble(response.Content.ReadAsStringAsync().Result, CultureInfo.InvariantCulture);
+                }
             }
+            catch (Exception ex)
+            {
+                taxaJuros = 0;
+                throw new Exception(ex.Message + "\n" + ex.StackTrace);
+            }
+
 
             return taxaJuros;
         }
