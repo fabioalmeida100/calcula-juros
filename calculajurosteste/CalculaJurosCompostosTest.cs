@@ -1,8 +1,8 @@
-using calculajuros.Lib.Implemetation;
-using calculajurostest.Fakes;
+using CalculaJurosAPI.Lib.Implemetation;
+using CalculaJurosTeste.Fakes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CalculaJurosTest
+namespace CalculaJurosTeste
 {
     [TestClass]
     public class CalculaJurosCompostosTest

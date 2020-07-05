@@ -1,9 +1,6 @@
-﻿using calculajuros.Lib;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CalculaJurosAPI.Lib;
 
-namespace calculajurostest.Fakes
+namespace CalculaJurosTeste.Fakes
 {
     public class TaxaJuros0_10Fake : ITaxaJuros
     {

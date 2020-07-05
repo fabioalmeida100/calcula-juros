@@ -6,7 +6,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
-    <DocumentationFile>C:\dev\CSharp\calculajuros\calculajuros\calculajuros.xml</DocumentationFile>
+    <DocumentationFile>C:\dev\CSharp\calculajuros\CalculaJurosAPI\CalculaJurosAPI.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

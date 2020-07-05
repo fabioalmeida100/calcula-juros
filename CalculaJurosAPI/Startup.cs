@@ -1,26 +1,19 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using calculajuros.Business;
-using calculajuros.Business.Implementation;
-using calculajuros.Lib;
-using calculajuros.Lib.Implemetation;
+using CalculaJurosAPI.Business;
+using CalculaJurosAPI.Business.Implementation;
+using CalculaJurosAPI.Lib;
+using CalculaJurosAPI.Lib.Implemetation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.OpenApi.Models;
 
-namespace calculajuros
+namespace CalculaJurosAPI
 {
     public class Startup
     {

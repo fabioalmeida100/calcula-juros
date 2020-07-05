@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RetornaTaxaAPI</name>
+    </assembly>
+    <members>
+        <member name="M:RetornaTaxaAPI.Controllers.TaxaJurosController.Index">
+            <summary>
+                Retorna o valor da taxa de juros atual
+            </summary>
+            <response code="200">Valor da taxa de juros (Ex: 0.01)</response>
+        </member>
+    </members>
+</doc>

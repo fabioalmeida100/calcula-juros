@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using calculajuros.Business;
+﻿using CalculaJurosAPI.Business;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.Swagger.Annotations;
 
-namespace calculajuros.Controllers
+namespace CalculaJurosAPI.Controllers
 {
     [Route("[controller]")]
     [ApiController]

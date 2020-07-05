@@ -1,9 +1,7 @@
-﻿using calculajuros.Lib;
-using calculajuros.Lib.Implemetation;
-using System;
-using System.Globalization;
+﻿using CalculaJurosAPI.Lib;
+using CalculaJurosAPI.Lib.Implemetation;
 
-namespace calculajuros.Business.Implementation
+namespace CalculaJurosAPI.Business.Implementation
 {
     public class CalculoJurosBusiness : ICalculoJurosBusiness
     {

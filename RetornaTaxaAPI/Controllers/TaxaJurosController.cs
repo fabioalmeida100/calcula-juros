@@ -2,7 +2,7 @@
 using Swashbuckle.Swagger.Annotations;
 using System;
 
-namespace retornajuros.Controllers
+namespace RetornaTaxaAPI.Controllers
 {
     [Route("[controller]")]
     [ApiController]

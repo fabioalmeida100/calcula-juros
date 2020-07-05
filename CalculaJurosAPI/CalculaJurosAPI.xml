@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CalculaJurosAPI</name>
+    </assembly>
+    <members>
+        <member name="M:CalculaJurosAPI.Controllers.CalculaJurosController.Index(System.Decimal,System.Int32)">
+            <summary>
+                Retorna o cálculo dos Juros Compostos
+            </summary>
+            <param name="valorInicial">Valor inicial aplicado</param>
+            <param name="meses">Meses (valor inteiro)</param>
+            <response code="200">Retorna o valor calculado do juros composto</response>
+            <response code="500">Possível problema de comunicação com a API de Taxa de Juros. Verificar URL da API no arquivo appsettings.json</response>            
+        </member>
+        <member name="M:CalculaJurosAPI.Controllers.CalculaJurosController.ShowMeTheCode">
+            <summary>
+                Retorna a URL do projeto no Github
+            </summary>
+            <response code="200">Retorna a URL do projeto no Github</response>
+        </member>
+    </members>
+</doc>

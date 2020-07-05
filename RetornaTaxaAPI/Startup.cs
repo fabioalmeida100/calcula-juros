@@ -9,7 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.OpenApi.Models;
 
-namespace retornajuros
+namespace RetornaTaxaAPI
 {
     public class Startup
     {

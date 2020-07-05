@@ -3,7 +3,7 @@ using System;
 using System.Globalization;
 using System.Net.Http;
 
-namespace calculajuros.Lib.Implemetation
+namespace CalculaJurosAPI.Lib.Implemetation
 {
     public class TaxaJuros: ITaxaJuros
     {
