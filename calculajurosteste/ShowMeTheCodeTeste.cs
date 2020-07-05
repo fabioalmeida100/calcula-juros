@@ -20,7 +20,7 @@ namespace CalculaJurosTeste
         [TestMethod]
         public void obter_url_projeto_github_show_me_the_code()
         {
-            Assert.AreEqual("", _showMeTheCode.ShowMeTheCode());
+            Assert.AreEqual("https://github.com/fabioalmeida100/calcula-juros.git", _showMeTheCode.ShowMeTheCode());
         }
     }
 }
